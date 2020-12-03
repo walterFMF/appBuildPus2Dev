@@ -7,9 +7,10 @@
       "android",
       "web"
     ],
-    "version": "1.0.0",
+    "version": "3.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -17,12 +18,36 @@
     },
     "updates": {
       "fallbackToCacheTimeout": 0
+
     },
     "assetBundlePatterns": [
       "**/*"
     ],
+    "android": {      
+      "package": "com.fazpedidoPush.app", 
+      
+      "versionCode": 2,
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "data": [{
+            "scheme": "fazpedidoPush",
+            "host":"fazpedidoPush"
+          }],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        }
+      ]
+    },    
     "ios": {
       "supportsTablet": true
+    },
+    "notification":{
+      "icon": "./assets/icon-notif.png",
+      "color": "#000000"
     }
+
   }
 }
